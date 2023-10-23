@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 function App() {
   const [activity, setActivity] = useState("");
@@ -14,7 +14,6 @@ function App() {
       console.error("Error fetching data:", error);
     }
   };
-  fetchData();
   return (
     <div className="App">
       <header>
