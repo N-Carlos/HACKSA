@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import React, { useState } from "react";
 
@@ -14,27 +13,36 @@ function App() {
       console.error("Error fetching data:", error);
     }
   };
+
+  const getResults = async () => {
+    try {
+      let url = "https://www.google.com/search?q=" + activity;
+      window.open(url);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+
   return (
     <div className="App">
       <header>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
         <div>
           <h1>Feeling Bored? How about...</h1>
-          <button type="button" onClick={fetchData}>
-            {"Click me PLEASEEE"}
+          <button
+            className="SuggestionButton"
+            type="button"
+            onClick={fetchData}
+          >
+            Click me
           </button>
           <p>{activity}</p>
+          <button
+            className="SuggestionButton"
+            type="button"
+            onClick={getResults}
+          >
+            Top google results
+          </button>
         </div>
       </header>
     </div>

@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+
 }
 
 .App-logo {
@@ -35,4 +36,12 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.SuggestionButton{
+  background-color: #99F7AB;
+  border: 2px solid #60695C;
+  border-radius: 50%;
+  width: 100px;
+  height: 50px;
 }
